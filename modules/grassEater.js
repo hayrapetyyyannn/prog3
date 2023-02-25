@@ -1,11 +1,12 @@
 class GrassEater extends LivingCreature{
     constructor(x, y, index) {
-    super(x,y,index)
-    this.energy=8;
+        super(x,y,index)
+        this.energy = 8;
     }
 
     chooseCell(ch) {
-        return super.chooseCell(ch)
+        this.getNewCoordinates()
+        return super.chooseCell(ch);
     }
     getNewCoordinates() {
         this.directions = [

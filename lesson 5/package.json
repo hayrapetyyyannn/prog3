@@ -1,7 +1,8 @@
 {
-  "name": "adsg",
+  "name": "test",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -10,8 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "p5": "^1.5.0",
     "socket.io": "^4.6.0"
-  },
-  "description": ""
+  }
 }
