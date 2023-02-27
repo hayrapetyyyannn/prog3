@@ -1,13 +1,20 @@
 //`grassHelper` object@ snvume bolor objectnerov baci `grass` ic
 //erb `energy` in havasarvume 0 i ayn veracvum e `grassi`
-let LivingCreature = require('/.living')
+let LivingCreature = require('./living')
 
-module.exports=class GrassHelper extends LivingCreature{
+module.exports = class GrassHelper extends LivingCreature{
     constructor(x,y){
         super(x,y)
         this.energy = 10;
         this.directions = [];
     }
+
+    random(ch){
+        let found = this.chooseCell(ch);
+        let result = Math.floor(Math.random()*found.length)
+        return found[result];
+    }
+
 
     chooseCell(ch) {
         return super.chooseCell(ch);
@@ -27,8 +34,7 @@ module.exports=class GrassHelper extends LivingCreature{
     move() {
         if (this.energy > 0) {
             this.energy--
-            let emptyCells = this.chooseCell(0)
-            var newCell = random(emptyCells);
+            var newCell = this.random(0);
             if (newCell) {
                 var newX = newCell[0]
                 var newY = newCell[1]
@@ -46,7 +52,7 @@ module.exports=class GrassHelper extends LivingCreature{
     eat(){
         this.getNewCoordinates();
         let eaterCells = this.chooseCell(2 && 3 && 4)
-        var newCell = random(eaterCells);
+        var newCell = this.random(eaterCells);
 
         if (newCell) {
             this.energy--;
