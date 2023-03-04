@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edigaryannn/avo.prog-3.git"
+    "url": "git+https://github.com/hayrapetyyyannn/prog3.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/edigaryannn/avo.prog-3/issues"
+    "url": "https://github.com/hayrapetyyyannn/prog3/issues"
   },
-  "homepage": "https://github.com/edigaryannn/avo.prog-3#readme",
+  "homepage": "https://github.com/hayrapetyyyannn/prog3#readme",
   "dependencies": {
     "express": "^4.18.2",
     "socket.io": "^4.6.1"
